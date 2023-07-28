@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration Form</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="registration form">
+      <header>Signup</header>
+      <form action="/create_account" method="post">
+        <input type="text" placeholder="Enter your email" id="email" required>
+        <input type="text" placeholder="Enter your username" id="username" required>
+        <input type="password" placeholder="Create a password" id="password" required>
+        <input type="submit" class="button" value="Signup" id="submitForm">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
