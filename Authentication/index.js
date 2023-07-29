@@ -18,12 +18,10 @@ app.use(
   })
 );
 
-let usenramee;
-
 function readUserData(callback) {
   fs.readFile("users.json", "utf-8", function (err, data) {
     if (err) {
-      console.log("ERROR:" + err);
+      console.log("ERROR IN READING THE FILE DATA :" + err);
       callback(err, null);
     } else {
       {
@@ -74,7 +72,7 @@ app.get("/", (req, res) => {
     res.redirect("/login");
     return;
   }
-  res.sendFile(__dirname + "/Views/dashboard.html");
+  res.sendFile(__dirname + "/Views/index.html");
 });
 
 app.get("/login", (req, res) => {
@@ -110,12 +108,12 @@ app.post("/login", (req, res) => {
   });
 });
 
-app.get("/style/style.css",(req,res)=>{
-    res.sendFile(__dirname + "/Views/style/style.css");
+app.get("/style/style.css", (req, res) => {
+  res.sendFile(__dirname + "/Views/style/style.css");
 });
 
-app.get("/Script/script.js",(req,res)=>{
-    res.sendFile(__dirname + "/Views/Scripts/script.js");
+app.get("/Script/script.js", (req, res) => {
+  res.sendFile(__dirname + "/Views/Script/script.js");
 });
 
 
@@ -123,7 +121,7 @@ app.get("/signup", (req, res) => {
   res.sendFile(__dirname + "/Views/signup.html");
 });
 
-app.post("/create_account", (req, res) => {
+app.post("/signup", (req, res) => {
   readUserData((err, users) => {
     if (
       req.body.username.trim() !== "" &&

@@ -12,10 +12,10 @@
   <div class="container">
     <div class="registration form">
       <header>Signup</header>
-      <form action="/create_account" method="post">
-        <input type="text" placeholder="Enter your email" id="email" required>
-        <input type="text" placeholder="Enter your username" id="username" required>
-        <input type="password" placeholder="Create a password" id="password" required>
+      <form action="/signup" method="post">
+        <input type="text" placeholder="Enter your username" id="username" name="username" required>
+        <input type="text" placeholder="Enter your email" id="email" name="email" required>
+        <input type="password" placeholder="Create a password" id="password" name="password" required>
         <input type="submit" class="button" value="Signup" id="submitForm">
       </form>
       <div class="signup">
