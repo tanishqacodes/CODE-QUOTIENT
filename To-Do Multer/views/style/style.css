@@ -1,0 +1,139 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    /* width: 80vw; */
+    /* height: 80vh; */
+    background-color: lightblue;
+    border: 1px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.left-container{
+    flex: 2;
+    padding: 20px;
+    /* width:50% */
+    width: 645px;
+    height: 557px;
+}
+
+.right-container{
+    flex: 1;
+    background-color: royalblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 542px;
+}
+
+.todo-list{
+    /* text-decoration: none; */
+    margin-bottom: 10px;
+    /* padding: 8px 12px; */
+    padding: 5px 18px;
+    border-radius: 4px;
+    background-color: thistle;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-text{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* completed list */
+.completed-list{
+    background-color: cornflowerblue;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+/* completed button */
+.complete-button{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.del-button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-button{
+    background-color: #e0608b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+#task{
+
+    font-size: 35px;
+    border: none;
+}
+  
+#task:focus {
+    outline: none;
+    border: 1px solid #e0608b ;
+}
+  
+
+.complete-button:hover,
+.del-button:hover,
+#submit-button:hover {
+    opacity: 0.8;
+}
+  
+img{
+    height: 60px;
+    width: 60px;
+}
+li{
+    padding: 20px;
+}
+#logo{
+    /* background-color: #e0608b; */
+    color: white;
+    /* border: n; */
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+  
+.buttons-container {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+

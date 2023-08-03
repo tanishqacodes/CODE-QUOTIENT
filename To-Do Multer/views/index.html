@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Multer</title>
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <h3>Task List</h3>
+            <ol class="todo-list" type="i">
+                <!-- demo -->
+                <li class="todo">
+                    <span class="todo-text">Project</span>
+                    <div class="buttons-container">
+                        <img src="139.jpg">
+                        <button class="del-button">del</button>
+                        <button class="complete-button">complete</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right-container">
+            <h3>Task Form</h3>
+            <form id="input-task-form">
+                <input type="text" name="task" id="task" placeholder="Enter your Task" required><br>
+                <input type="file" name="logo" id="logo"><br>
+                <input type="submit" value="Submit" id="submit-button">
+        </form>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html> 
