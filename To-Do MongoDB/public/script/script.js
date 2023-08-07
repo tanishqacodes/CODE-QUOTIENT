@@ -5,6 +5,7 @@ const inputNode = document.getElementById("input-box");
 const todoListNode = document.getElementById("task-container");
 
 
+// getTasks();
 // this function get all the exusting tasks and show them in list
 function getTasks(){
     // sending get request to server
@@ -14,7 +15,7 @@ function getTasks(){
             todoListNode.innerHTML = "";
             tasks.forEach(task => {
                // display task for every that is in the response
-                createTaskElement(task.id,task.text,task.completed); 
+                createTaskElement(task.todo_id,task.text,task.completed); 
             });
     }).catch((err)=>console.error("Error fetchng tasks : ",err)
         // handles the error
@@ -68,9 +69,9 @@ function addTask(taskText){
 
         console.log("Add task : ",data);
         // recieved data is of the type {message : "new task added" , task:newTask}
-        createTaskElement(data.task.id , data.task.text, data.task.completed);
+        createTaskElement(data.task.todo_id , data.task.text, data.task.completed);
 
-    }).catch((err)=>console.error("Error adding task : " , error));
+    }).catch((err)=>console.error("Error adding task : " , err));
 }
 
 
@@ -86,7 +87,7 @@ function deleteTask(taskId){
 
         // [data-task-id=taskId] is the attribute selector(we can select elements using attrinbuetes)
 
-        const taskItem = document.querySelector(`li[data-task-id="${taskId}]"`);
+        const taskItem = document.querySelector(`li[data-task-id="${taskId}"]`);
 
         // remove the ID from the UI
         taskItem.remove();
